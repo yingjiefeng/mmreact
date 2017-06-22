@@ -1,0 +1,188 @@
+原因为NDK 版本不对，必须gcc4.8，请选择 Android NDK r10e 对应系统下载安装，需要自备梯子。
+https://segmentfault.com/a/1190000007866853
+http://www.cnblogs.com/yaotong/archive/2011/01/25/1943615.html
+Android NDK r12b
+
+Windows 32-bit | Windows 64-bit | Mac OS X 64-bit | Linux 64-bit
+Android NDK r11c
+
+Windows 32-bit | Windows 64-bit | Mac OS X 64-bit | Linux 64-bit
+Android NDK r10e
+
+Windows 32-bit | Windows 64-bit | Mac OS X 64-bit | Linux 64-bit
+
+
+ 超详细Windows版本编译运行React Native官方实例UIExplorer项目(多图慎入)
+标签： windowsnative实例windows版本运行UIExplore
+2016-02-14 08:32 5908人阅读 评论(1) 收藏 举报
+ 分类： React Native（24）
+版权声明：本文为博主原创文章，未经博主允许不得转载。
+目录(?)[+]
+转载请标明出处：
+http://blog.csdn.net/developer_jiangqq/article/details/50661981
+本文出自:【江清清的博客】
+(一)前言
+         【好消息】个人网站已经上线运行,后面博客以及技术干货等精彩文章会同步更新，请大家关注收藏:http://www.lcode.org
+         特别说明:群里很多童鞋都在说想Windows系统官方实例，但是官方提供的文档以及网上的例子都是OS X版本。今天特意给大家更新一下Windows版本运行官方 实例(UIExporler)全过程。俗话说学习一样新东西的时候，例如这边我们要学React Native的组件使用，那么最好的学习资料就是官方提供的材料了，作作为开发人员最好的学习资料就是源码，幸好官方给我们提供了UIExplorer项目，这里边包含React Native的基本所有组件的使用介绍和方法。下面我们来把该项目进行运行起来，不过这边只暂时使用到Android项目哦~ iOS的部分后期在进行讲解吧。请谅解哦~
+刚创建的React Native技术交流3群(496508742),React Native技术交流4群(458982758)，请不要重复加群！欢迎各位大牛,React Native技术爱好者加入交流!同时博客右侧欢迎微信扫描关注订阅号,移动技术干货,精彩文章技术推送!
+关于React Native各种疑难杂症,问题深坑总结方案请点击查看:
+
+Mac OS X版本编译运行官方实例请点击查看:
+
+(二)运行APP工作
+【注意】本文章的前置条件，需要你Windows环境正确安装了React Native环境:点击进入Windows系统安装配置React Native教程。
+
+2.1.React Native项目源码下载
+React Native项目官方地址:https://github.com/facebook/react-native 我们可以使用如下命令把代码clone到本地。
+
+[html] view plain copy
+git clone https://github.com/facebook/react-native.git
+具体项目结构如下:
+
+
+2.2.Android环境要求如下，请确保你的环境已经达到如下要求:
+①.Android Sdk版本23(在build.gradle中的compileSdkVersion)
+②.SDK build tools version 23.0.1(build.gradle中buildToolsVersion)
+③.Android Support Repository>=17
+④·Andoid NDK需要安装以及配置
+⑤·Cygwin安装
+[注]以上第①点到第③点的版本不需要和我这边一样，可以根据实际情况走，不过最好是最新版本哦~
+
+2.3.下载安装cygwin软件
+根据官方提供的文档我们需要执行类似于./packager/packager.sh这样的shell脚本，普通的Windows系统是无法执行这样的脚本的。所以我们的Windows系统可以下载安装cygwin之后就可以执行shell脚本啦。下载地址:https://www.cygwin.com/去下载对应的版本即可了。
+
+
+
+下载完成开始安装:
+
+
+
+选择从网络(Internet)进行安装，点击下一步:
+
+
+
+安装路径尽量采用英文(不要中文),然后默认选择下一步就行了.
+
+
+
+选择下载的镜像:
+
+
+
+这一步，我们选择需要下载安装的组件包，为了使我们安装的Cygwin能够编译程序，我们需要安装gcc编译 器，默认情况下，gcc并不会被安装，我们需要选中它来安装。为了安装gcc，我们用鼠标点开组件列表中的“Devel”分支，在该分支下，有很多组件， 我们必须的是：
+
+binutils
+gcc
+gcc-mingw
+gdb
+
+
+需要安装的组件选择完成之后开始下一步组件安装啦~
+
+
+
+最终安装组件完成
+
+
+
+下面我们在系统环境变量PATH中添加我们cygwin的bin目录这样我们就可以通过命令行界面直接使用bash进入cygwin环境啦~
+
+
+
+配置完成之后，重启命令行终端，然后敲入bash命令进入如下界面，就代表OK了
+
+
+
+2.4.下载安装NDK然后安装以及配置
+因为官方的实例是需要进行安装配置NDK的，所以大家需要去官方网站进行下载(请注意科学上网)http://developer.android.com/ndk/dowloads/index.html  大家下载自己系统对应的版本即可。下载成功之后解压缩，然后环境变量创建ANDROID_NDK配置一下即可
+
+
+
+2.5.添加Node依赖模块:该命令行需要切到react-native项目中,主要运行如下命令
+[html] view plain copy
+cd react-native
+?
+以及
+
+?
+[html] view plain copy
+npm install
+这样就添加了node_modules模块(其中包含了react-native核心库)
+
+突然运行发现错误了:
+
+
+
+这个是npm的版本问题，该npm2的版本不支持windows系统，所以我们需要进行升级。
+
+首先通过npm version查看当前的版本,然后升级到指定版本(npm升级方法点击进入)
+
+
+
+升级成功如下:
+
+
+
+然后复制C:\Users\{你的Windows用户名}\AppData\Roaming\npm\node_modules\npm下的文件到你的 NodeJS安装目录下的 \node_modules\npm 中，覆盖掉原有的全部文件；
+
+接下来重新在刚刚react-native中运行npm install命令即可.
+
+有预感的还是出现错误啦!
+
+
+
+出现错误发现我们电脑没有安装Python模块，有些童鞋这个错误可能不会出现的~那我们继续开始安装python模块吧。
+
+下载地址: https://www.python.org/downloads/release/python-278/
+
+大家根据自己的电脑系统以及版本进行下载安装吧
+
+【特别注意】python版本请选择2.5-3.0之间的版本哦~
+
+
+
+下载安装配置一下环境变量即可
+
+
+
+然后打开命令行执行python,看到如下信息就成功安装python了
+
+
+
+上面这些支持项已经全部安装了，下载切换到rect-native项目重新执行npm install开始添加mode模块吧
+
+
+
+2.6.开始编译官方实例UIExploerer项目
+打开之前安装的cygwin终端，切换到当前react-native项目中。注意切换路径方法以实际项目路径为准
+
+
+
+运行如下命令开始编译安装我们的官方实例
+
+[html] view plain copy
+./gradlew :Example:UIExplorer:android:app:installDebug
+?
+
+
+
+
+这边花的时间要看网络情况的，有时候速度会非常慢，等大家耐心等待~
+
+接下来就是最关键的一步啦~执行如下命令进行打包启动服务.
+
+[html] view plain copy
+./packager/packager.sh
+
+
+OK这样我的服务已经启动起来，大家只需要去设备中点击打开APP即可
+
+最后我们来看一下官方实例UIExplorer的运行效果
+
+
+
+(三)最后总结
+        今天主要给大家演示一下Windows版本编译运行React Native官方实例UIExplorer项目，至于其他几个实例只要把命令改一下就行了，各位童鞋举一反三吧。
+
+       尊重原创，转载请注明：From Sky丶清（http://blog.csdn.net/developer_jiangqq） 侵权必究！
+       关注我的订阅号(codedev123),每天分享移动开发技术(Android/IOS),项目管理以及博客文章!(欢迎关注，第一时间推送精彩文章)

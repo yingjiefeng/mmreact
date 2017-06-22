@@ -1,0 +1,16 @@
+{
+  "name": "helloworld",
+  "version": "1.0.0",
+  "description": "helloworld",
+  "main": "index.android.js",
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start"
+  },
+  "author": "fgj",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^15.2.1",
+    "react-native": "^0.31.0",
+    "react-navigation": "^1.0.0-beta.11"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "title": "react native android",
+  "description": "react native android bundle list",
+  "list": [
+    { "bundleAssetName": "index.android.bundle", "jSMainModuleName": "index.android","moduleName":"ModalDemo"},
+    { "bundleAssetName": "index.android-hello.bundle", "jSMainModuleName": "index.android-hello","moduleName":"HelloWorldApp"},
+    { "bundleAssetName": "index.android-highlight.bundle", "jSMainModuleName": "index.android-highlight","moduleName":"helloworld"},
+    { "bundleAssetName": "index.android-image.bundle", "jSMainModuleName": "index.android-image","moduleName":"helloworld"},
+    { "bundleAssetName": "index.android-json.bundle", "jSMainModuleName": "index.android-json","moduleName":"helloworld"},
+    { "bundleAssetName": "index.android-list-dy.bundle", "jSMainModuleName": "index.android-list-dy","moduleName":"helloworld"},
+    { "bundleAssetName": "index.android-listjson.bundle", "jSMainModuleName": "index.android-listjson","moduleName":"helloworld"},
+    { "bundleAssetName": "index.android-mainlist.bundle", "jSMainModuleName": "index.android-mainlist","moduleName":"helloworld"},
+    { "bundleAssetName": "index.android-modal.bundle", "jSMainModuleName": "index.android-modal","moduleName":"helloworld"},
+    { "bundleAssetName": "index.android-modal-anim.bundle", "jSMainModuleName": "index.android-modal-anim","moduleName":"helloworld"},
+    { "bundleAssetName": "index.android-nav.bundle", "jSMainModuleName": "index.android-nav","moduleName":"helloworld"},
+    { "bundleAssetName": "index.android-navigator.bundle", "jSMainModuleName": "index.android-navigator","moduleName":"helloworld"},
+    { "bundleAssetName": "index.android-picker.bundle", "jSMainModuleName": "index.android-picker","moduleName":"helloworld"},
+    { "bundleAssetName": "index.android-refresh.bundle", "jSMainModuleName": "index.android-refresh","moduleName":"helloworld"},
+    { "bundleAssetName": "index.android-scrollview.bundle", "jSMainModuleName": "index.android-scrollview","moduleName":"helloworld"},
+    { "bundleAssetName": "index.android-slider.bundle", "jSMainModuleName": "index.android-slider","moduleName":"helloworld"},
+    { "bundleAssetName": "index.android-statusbar.bundle", "jSMainModuleName": "index.android-statusbar","moduleName":"helloworld"},
+    { "bundleAssetName": "index.android-switch.bundle", "jSMainModuleName": "index.android-switch","moduleName":"helloworld"},
+    { "bundleAssetName": "index.android-textinput.bundle", "jSMainModuleName": "index.android-textinput","moduleName":"helloworld"},
+    { "bundleAssetName": "index.android-toolbar.bundle", "jSMainModuleName": "index.android-toolbar","moduleName":"helloworld"},
+    { "bundleAssetName": "index.android-toastnativeandroid.bundle", "jSMainModuleName": "index.android-toastnativeandroid","moduleName":"helloworld"},
+    { "bundleAssetName": "index.android-circleview.bundle", "jSMainModuleName": "index.android-circleview","moduleName":"AndroidNativeModule"},
+    { "bundleAssetName": "index.android-videoview.bundle", "jSMainModuleName": "index.android-videoview","moduleName":"SimpleVideoView"},
+    { "bundleAssetName": "index.android-rctvideoview.bundle", "jSMainModuleName": "index.android-rctvideoview","moduleName":"VideoPlayScene"},
+    { "bundleAssetName": "index.android-rctimageview.bundle", "jSMainModuleName": "index.android-rctimageview","moduleName":"helloworld"},
+    { "bundleAssetName": "index.android-alert.bundle", "jSMainModuleName": "index.android-alert","moduleName":"AlertDemo"},
+    { "bundleAssetName": "index.android-modal-dialog.bundle", "jSMainModuleName": "index.android-modal-dialog","moduleName":"ModalDemo"}
+
+  ]
+}
