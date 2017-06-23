@@ -2,6 +2,6 @@
 import { AppRegistry, Text } from 'react-native';
 
 
-import msearcharticle from './mm/search/msearcharticle';
+import msearch from './mm/search/msearch';
 // 注意，这里用引号括起来的'HelloWorldApp'必须和你init创建的项目名一致
-AppRegistry.registerComponent('msearcharticle', () => msearcharticle);
+AppRegistry.registerComponent('msearch', () => msearch);

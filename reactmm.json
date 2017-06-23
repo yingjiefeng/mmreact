@@ -2,9 +2,11 @@
   "title": "react native android",
   "description": "react native android bundle list",
   "list": [
-    { "bundleAssetName": "index.android.bundle", "jSMainModuleName": "index.android","moduleName":"marticle"},
+    { "bundleAssetName": "index.android.bundle", "jSMainModuleName": "index.android","moduleName":"msearcharticle"},
     { "bundleAssetName": "index.android-mleftmenu.bundle", "jSMainModuleName": "index.android-mleftmenu","moduleName":"mleftmenu"},
-    { "bundleAssetName": "index.android-marticle.bundle", "jSMainModuleName": "index.android-marticle","moduleName":"marticle"}
+    { "bundleAssetName": "index.android-marticle.bundle", "jSMainModuleName": "index.android-marticle","moduleName":"marticle"},
+    { "bundleAssetName": "index.android-msearch.bundle", "jSMainModuleName": "index.android-msearch","moduleName":"msearch"},
+    { "bundleAssetName": "index.android-msearcharticle.bundle", "jSMainModuleName": "index.android-msearcharticle","moduleName":"msearcharticle"}
 
 
   ]
