@@ -18,7 +18,7 @@ var {
 } = ReactNative;
 
 let jsoupModule = NativeModules.ReactBaseJsoupModule;
-var helloworld = React.createClass({
+var marticle = React.createClass({
     /*--  lifecycle --*/
     getInitialState: function() {
         return {
@@ -146,5 +146,5 @@ var styles = StyleSheet.create({
         backgroundColor:'#EAEAEA',
     }
 });
-module.exports = helloworld;
+module.exports = marticle;
 // AppRegistry.registerComponent('helloworld', () => helloworld);

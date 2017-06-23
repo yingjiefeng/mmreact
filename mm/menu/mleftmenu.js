@@ -18,7 +18,7 @@ var {
 } = ReactNative;
 
 let jsoupModule = NativeModules.ReactBaseJsoupModule;
-var helloworld = React.createClass({
+var mleftmenu = React.createClass({
     /*--  lifecycle --*/
     getInitialState: function() {
         return {
@@ -136,5 +136,5 @@ var styles = StyleSheet.create({
         backgroundColor:'#EAEAEA',
     }
 });
-module.exports = helloworld;
+module.exports = mleftmenu;
 // AppRegistry.registerComponent('helloworld', () => helloworld);
