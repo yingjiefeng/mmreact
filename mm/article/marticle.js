@@ -18,7 +18,7 @@ var {
 } = ReactNative;
 
 let jsoupModule = NativeModules.ReactBaseJsoupModule;
-var marticle = React.createClass({
+var helloworld = React.createClass({
     /*--  lifecycle --*/
     getInitialState: function() {
         return {
